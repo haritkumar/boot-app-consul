@@ -35,7 +35,27 @@ spring:
 - file - Git
 
 ## Configure application
-- create bootstrap.yml with following config
+- Add additional jars to **pom.xml**
+```sh
+    <org.springframework.cloud>2.0.0.RELEASE</org.springframework.cloud>
+
+    <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-config</artifactId>
+			<version>${org.springframework.cloud}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
+			<version>${org.springframework.cloud}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+```
+
+- create **bootstrap.yml** with following config
   
 ![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538218754/github/app.png)
 
