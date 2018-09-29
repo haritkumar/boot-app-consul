@@ -22,15 +22,33 @@ spring:
     username: root
     password: rootchanged
 ```
+## We can use three way to load configuration from consul
+- key/value
+- yaml
+- file - Git
 
-docker run -d --rm --name consul -p 8500:8500 consul
-/config/boot-app/foo
+## Configure application
+- create bootstrap.yml with following config
+```sh
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/asicdv?useSSL=false
+    username: root
+    password: root    
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      jpa.generate-ddl: true
+      ddl-auto: update
+server:
+  port: 8081 
+```
+- Start application http://localhost:8081/
 
-You can use three way to load configuration from consul
 
-key/value
-yaml
-file - Git
 
 https://github.com/spring-cloud/spring-cloud-consul/blob/master/docs/src/main/asciidoc/spring-cloud-consul.adoc
 
