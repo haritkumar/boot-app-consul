@@ -1,3 +1,10 @@
+# Consul distributed config and service discovery
+- Update application configuration without restarting app/pod/instance
+- Service discovery
+![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538216922/github/consul.png)
+
+
+
 docker run -d --rm --name consul -p 8500:8500 consul
 /config/boot-app/foo
 
