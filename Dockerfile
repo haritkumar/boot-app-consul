@@ -1,5 +1,5 @@
 FROM alpine:3.7
-LABEL MAINTAINER="Harit Kumar <harit_kumar@optum.com>" 
+LABEL MAINTAINER="Harit Kumar <haritkumar@hotmail.com>" 
 
 ENV CONSUL_VERSION=1.2.3 \
     HASHICORP_RELEASES=https://releases.hashicorp.com \
