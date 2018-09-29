@@ -1,9 +1,27 @@
 # Consul distributed config and service discovery
 - Update application configuration without restarting app/pod/instance
 - Service discovery
+  
 ![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538216922/github/consul.png)
 
 
+## Start consul server
+```sh
+docker build -t consul .
+docker run -p 8080:8080 consul
+```
+- Access consul web ui http://localhost:8080/ui/
+- create a key/value 
+```sh
+config/application/data
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/asicdv?useSSL=false
+    username: root
+    password: rootchanged
+```
 
 docker run -d --rm --name consul -p 8500:8500 consul
 /config/boot-app/foo
