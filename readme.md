@@ -11,6 +11,10 @@ docker build -t consul .
 docker run -p 8080:8080 consul
 ```
 - Access consul web ui http://localhost:8080/ui/
+- Login using foo:bar
+
+![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538221036/github/consul_ui.png)
+
 - create a key/value 
 ```sh
 config/application/data
@@ -22,6 +26,9 @@ spring:
     username: root
     password: rootchanged
 ```
+
+![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538221036/github/key_value.png)
+
 ## We can use three way to load configuration from consul
 - key/value
 - yaml
@@ -50,3 +57,10 @@ server:
   port: 8081 
 ```
 - Start application http://localhost:8081/
+
+![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538221036/github/api.png)
+
+- On updating properties on consul, changes will reflect in app without restart
+
+![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538221035/github/log.png)
+
