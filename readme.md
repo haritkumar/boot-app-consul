@@ -29,7 +29,8 @@ spring:
 
 ## Configure application
 - create bootstrap.yml with following config
-![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538218638/github/app.png)
+  
+![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538218754/github/app.png)
 
 ```sh
 spring:
