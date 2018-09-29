@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: boot-app
+  cloud:
+    consul:
+      discovery:
+        X-Config-Token: 6442e58b-d1ea-182e-cfa5-cf9cddef0722
+      host: localhost
+      port: 8080
+      config:
+        data-key: data
+        enabled: true
+        prefix: config
+        format: yaml
+        failFast: false
