@@ -16,7 +16,7 @@ docker run -p 8080:8080 consul
 ![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538221036/github/consul_ui.png)
 
 - Create a key/value 
-```sh
+```yml
 config/application/data
 
 spring:
