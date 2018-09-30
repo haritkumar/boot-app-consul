@@ -76,6 +76,38 @@ spring:
 server:
   port: 8081 
 ```
+
+- User **@RefreshScope** annotation to update config on runtime
+  
+```java
+@SpringBootApplication
+@RefreshScope
+@EntityScan("com.boot.entity")
+public class BootAppApplication {
+
+	
+	public static void main(String[] args) {
+		SpringApplication.run(BootAppApplication.class, args);
+	}
+
+	
+	@Bean
+    @ConfigurationProperties("spring.datasource")
+	@Primary
+    public DataSourceProperties dataSourceProperties() {
+        return new DataSourceProperties();
+    }
+
+    @Bean
+    @ConfigurationProperties("spring.datasource")
+    @Primary
+    public HikariDataSource dataSource(DataSourceProperties properties) {
+        return properties.initializeDataSourceBuilder().type(HikariDataSource.class)
+                .build();
+    }
+}
+```
+
 - Start application http://localhost:8081/
 
 ![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538221036/github/api.png)
