@@ -15,7 +15,7 @@ docker run -p 8080:8080 consul
 
 ![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538221036/github/consul_ui.png)
 
-- create a key/value 
+- Create a key/value 
 ```sh
 config/application/data
 
@@ -36,7 +36,7 @@ spring:
 
 ## Configure application
 - Add additional jars to **pom.xml**
-```sh
+```xml
     <org.springframework.cloud>2.0.0.RELEASE</org.springframework.cloud>
 
     <dependency>
@@ -59,7 +59,7 @@ spring:
   
 ![alt text](https://res.cloudinary.com/haritkumar/image/upload/v1538218754/github/app.png)
 
-```sh
+```yml
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
